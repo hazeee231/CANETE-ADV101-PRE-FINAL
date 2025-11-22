@@ -95,7 +95,7 @@ export default function Home() {
       <header className="header">
         <div className="brand">My Tasks</div>
         <nav className="nav">
-          <button className={`nav-btn ${tab === "todo" ? "active" : ""}`} onClick={() => setTab("todo")}>To Do</button>
+          <button className={`nav-btn ${tab === "todo" ? "active" : ""}`} onClick={() => setTab("todo")}>To Create</button>
           <button className={`nav-btn ${tab === "completed" ? "active" : ""}`} onClick={() => setTab("completed")}>Completed</button>
         </nav>
         <div className="search-area">
@@ -128,7 +128,7 @@ export default function Home() {
         </section>
 
         <section className="panel list">
-          <h2 className="panel-title">{tab === "todo" ? "To Do" : "Completed"}</h2>
+          <h2 className="panel-title">{tab === "todo" ? "To Do" : "Finished"}</h2>
 
           {visible.length === 0 ? (
             <div className="empty">No tasks — add one using the form.</div>
