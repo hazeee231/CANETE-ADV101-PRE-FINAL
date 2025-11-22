@@ -93,7 +93,7 @@ export default function Home() {
   return (
     <div className="page">
       <header className="header">
-        <div className="brand">My Tasks</div>
+        <div className="brand">My Schedules</div>
         <nav className="nav">
           <button className={`nav-btn ${tab === "todo" ? "active" : ""}`} onClick={() => setTab("todo")}>To Create</button>
           <button className={`nav-btn ${tab === "completed" ? "active" : ""}`} onClick={() => setTab("completed")}>Completed</button>
@@ -105,7 +105,7 @@ export default function Home() {
 
       <main className="wrap">
         <section className="panel create">
-          <h2 className="panel-title">Create Task</h2>
+          <h2 className="panel-title">My Schedules</h2>
           <form className="form" onSubmit={addTodo}>
             <input
               className="field title"
@@ -122,7 +122,7 @@ export default function Home() {
               onKeyDown={(e) => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); doAdd(); } }}
             />
             <div className="form-actions">
-              <button type="submit" className="primary">Add Task</button>
+              <button type="submit" className="primary">Add Schedule</button>
             </div>
           </form>
         </section>
@@ -131,7 +131,7 @@ export default function Home() {
           <h2 className="panel-title">{tab === "todo" ? "To Do" : "Finished"}</h2>
 
           {visible.length === 0 ? (
-            <div className="empty">No tasks — add one using the form.</div>
+            <div className="empty">No Schedule — add one using the form.</div>
           ) : (
             <div className="grid">
               {visible.map((it) => (
